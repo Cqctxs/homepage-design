@@ -8,7 +8,6 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: #333;
 }
 
 .logo {
@@ -18,6 +17,11 @@ body {
 header {
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  position: absolute;
+  z-index: 9999;
+  padding: 0.9rem 0;
+  top: 0;
+  left: 0;
 }
 
 header nav {
@@ -91,4 +95,11 @@ header ul a {
 
 .menu .bar::after {
   top: 4.5px;
+}
+
+main {
+  background-color: #353;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
