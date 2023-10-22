@@ -1,11 +1,13 @@
 import React from 'react'
+import logo from '../assets/images/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 
 function Navbar() {
     return (
         <header>
             <nav>
-                <img src='home/public/images/logo.png' alt='logo' className='logo' />
+                <img src={logo} alt='logo' className='logo' />
                 <ul>
                     <li>
                         <a href='/login'>Login</a>
@@ -15,11 +17,11 @@ function Navbar() {
                     </li>
                     <li className='search'>
                         <a href='/search'>
-                            <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
+                            <FontAwesomeIcon icon={faMagnifyingGlass}/>
                         </a>
                     </li>
                     <li className='menu'>
-                        <a>
+                        <a href='/'>
                             <div className='bar'></div>
                         </a>
                     </li>
