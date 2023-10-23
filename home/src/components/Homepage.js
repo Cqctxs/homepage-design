@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Image from './Image';
 import {
   background,
   black_shadow,
@@ -27,7 +28,7 @@ function Homepage() {
     y: 0
   });
   const [elements, setElements] = useState([]);
-  
+
   useEffect(() => {
     const mouseMove = (e) => {
       setMousePosition({
@@ -48,34 +49,34 @@ function Homepage() {
     elements.forEach(el => {
       el.style.transform = `translate(calc(-50% + ${mousePosition.x}px), calc(-50% + ${mousePosition.y}px))`;
     })
-  }, [mousePosition])
+  }, [mousePosition, elements])
   return (
     <main>
       <div className="vingette" />
-      <img src={background} alt="" className="parallax bg-img" />
-      <img src={fog_7} alt="" className="parallax fog-7" />
-      <img src={mountain_10} alt="" className="parallax mountain-10" />
-      <img src={fog_6} alt="" className="parallax fog-6" />
-      <img src={mountain_9} alt="" className="parallax mountain-9" />
-      <img src={mountain_8} alt="" className="parallax mountain-8" />
-      <img src={fog_5} alt="" className="parallax fog-5" />
-      <img src={mountain_7} alt="" className="parallax mountain-7" />
+      <Image image={background} className="parallax bg-img" />
+      <Image image={fog_7} className="parallax fog-7" />
+      <Image image={mountain_10} className="parallax mountain-10" />
+      <Image image={fog_6} className="parallax fog-6" />
+      <Image image={mountain_9} className="parallax mountain-9" />
+      <Image image={mountain_8} className="parallax mountain-8" />
+      <Image image={fog_5} className="parallax fog-5" />
+      <Image image={mountain_7} className="parallax mountain-7" />
       <div className="parallax text">
-        <h2>China</h2>
-        <h1>ZhangJiaJie</h1>
+        <h2>Hello</h2>
+        <h1>World</h1>
       </div>
-      <img src={mountain_6} alt="" className="parallax mountain-6" />
-      <img src={fog_4} alt="" className="parallax fog-4" />
-      <img src={mountain_5} alt="" className="parallax mountain-5" />
-      <img src={fog_3} alt="" className="parallax fog-3" />
-      <img src={mountain_4} alt="" className="parallax mountain-4" />
-      <img src={mountain_3} alt="" className="parallax mountain-3" />
-      <img src={fog_2} alt="" className="parallax fog-2" />
-      <img src={mountain_2} alt="" className="parallax mountain-2" />
-      <img src={mountain_1} alt="" className="parallax mountain-1" />
-      <img src={sun_rays} alt="" className="sun-rays" />
-      <img src={black_shadow} alt="" className="black-shadow" />
-      <img src={fog_1} alt="" className="parallax fog-1" />
+      <Image image={mountain_6} className="parallax mountain-6" />
+      <Image image={fog_4} className="parallax fog-4" />
+      <Image image={mountain_5} className="parallax mountain-5" />
+      <Image image={fog_3} className="parallax fog-3" />
+      <Image image={mountain_4} className="parallax mountain-4" />
+      <Image image={mountain_3} className="parallax mountain-3" />
+      <Image image={fog_2} className="parallax fog-2" />
+      <Image image={mountain_2} className="parallax mountain-2" />
+      <Image image={mountain_1} className="parallax mountain-1" />
+      <Image image={sun_rays} className="sun-rays" />
+      <Image image={black_shadow} className="black-shadow" />
+      <Image image={fog_1} className="parallax fog-1" />
     </main>
   )
 }
