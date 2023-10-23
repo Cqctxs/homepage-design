@@ -17,7 +17,7 @@ function Navbar() {
                     </li>
                     <li className='search'>
                         <a href='/search'>
-                            <FontAwesomeIcon icon={faMagnifyingGlass}/>
+                            <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </a>
                     </li>
                     <li className='menu'>
