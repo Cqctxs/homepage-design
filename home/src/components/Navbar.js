@@ -7,7 +7,7 @@ function Navbar() {
     return (
         <header>
             <nav>
-                <img src={logo} alt='logo' className='logo' />
+                <h2 className='logo'>Hi Alex</h2>
                 <ul>
                     <li>
                         <a href='/login'>Login</a>

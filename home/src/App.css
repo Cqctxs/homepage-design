@@ -15,7 +15,8 @@ body {
 }
 
 .logo {
-  width: 100px;
+  font-weight: 100;
+  font-size: 2rem;
 }
 
 header {
@@ -45,7 +46,7 @@ header ul {
 
 header ul a {
   text-decoration: none;
-  color: #fff;
+  color: #000;
   padding: 0 1.5rem;
   text-transform: uppercase;
   font-weight: 300;
