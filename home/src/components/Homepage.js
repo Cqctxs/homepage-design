@@ -23,7 +23,7 @@ import {
   mountain_10,
   sun_rays
 } from '../assets/images'
-function Homepage({mousePosition}) {
+function Homepage() {
   const { clientX, clientY } = useMousePosition();
   const [elements, setElements] = useState([]);
 
@@ -38,7 +38,7 @@ function Homepage({mousePosition}) {
       const y = parseFloat(el.getAttribute('data-y'));
       el.style.transform = `translate(calc(-50% + ${((clientX - window.innerWidth / 2) * -x)}px), calc(-50% + ${(clientY - window.innerHeight / 2) * -y}px))`;
     })
-  }, [clientX, clientY])
+  }, [clientX, clientY, elements])
   return (
     <main>
       <div className="vingette" />
@@ -51,8 +51,8 @@ function Homepage({mousePosition}) {
       <img src={fog_5} alt="" className="parallax fog-5" data-x={0.16} data-y={0.105} />
       <img src={mountain_7} alt="" className="parallax mountain-7" data-x={0.1} data-y={0.07} />
       <div className="parallax text" data-x={0.07} data-y={0.07}>
-        <h2>Hello</h2>
-        <h1>World</h1>
+        <h2>Lukas</h2>
+        <h1>eatingfood</h1>
       </div>
       <img src={mountain_6} alt="" className="parallax mountain-6" data-x={0.065} data-y={0.05} />
       <img src={fog_4} alt="" className="parallax fog-4" data-x={0.135} data-y={0.05} />
