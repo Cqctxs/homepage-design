@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import useMousePosition from '../hooks/useMousePosition';
+
 import {
   background,
   black_shadow,
@@ -21,37 +23,22 @@ import {
   mountain_10,
   sun_rays
 } from '../assets/images'
-function Homepage() {
-  const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0
-  });
+function Homepage({mousePosition}) {
+  const { clientX, clientY } = useMousePosition();
   const [elements, setElements] = useState([]);
 
   useEffect(() => {
-    const mouseMove = (e) => {
-      setMousePosition({
-        x: e.clientX - window.innerWidth / 2,
-        y: e.clientY - window.innerHeight / 2
-      })
-    }
-
     setElements(document.querySelectorAll(".parallax"));
-    console.log(document.querySelectorAll(".parallax"));
-    window.addEventListener("mousemove", mouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", mouseMove);
-    }
   }, []);
 
   useEffect(() => {
+
     elements.forEach(el => {
       const x = parseFloat(el.getAttribute('data-x'));
       const y = parseFloat(el.getAttribute('data-y'));
-      el.style.transform = `translate(calc(-50% + ${(mousePosition.x * -x)}px), calc(-50% + ${mousePosition.y * -y}px))`;
+      el.style.transform = `translate(calc(-50% + ${((clientX - window.innerWidth / 2) * -x)}px), calc(-50% + ${(clientY - window.innerHeight / 2) * -y}px))`;
     })
-  }, [mousePosition, elements])
+  }, [clientX, clientY])
   return (
     <main>
       <div className="vingette" />
