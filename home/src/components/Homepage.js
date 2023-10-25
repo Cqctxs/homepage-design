@@ -57,12 +57,12 @@ function Homepage() {
       <div className="vingette" />
       <img src={background} alt="" className="parallax bg-img" data-x={0.3} data-y={0.38} />
       <img src={fog_7} alt="" className="parallax fog-7" data-x={0.27} data-y={0.32} />
-      <img src={mountain_10} alt="" className="parallax mountain-10" data-x={0.195} data-y={0.305} />
+      <img src={mountain_10} alt="" className="parallax mountain-10" data-x={0.195} data-y={0.155} />
       <img src={fog_6} alt="" className="parallax fog-6" data-x={0.25} data-y={0.28} />
-      <img src={mountain_9} alt="" className="parallax mountain-9" data-x={0.125} data-y={0.155} />
-      <img src={mountain_8} alt="" className="parallax mountain-8" data-x={0.1} data-y={0.11} />
+      <img src={mountain_9} alt="" className="parallax mountain-9" data-x={0.125} data-y={0.085} />
+      <img src={mountain_8} alt="" className="parallax mountain-8" data-x={0.1} data-y={0.07} />
       <img src={fog_5} alt="" className="parallax fog-5" data-x={0.16} data-y={0.105} />
-      <img src={mountain_7} alt="" className="parallax mountain-7" data-x={0.1} data-y={0.1} />
+      <img src={mountain_7} alt="" className="parallax mountain-7" data-x={0.1} data-y={0.07} />
       <div className="parallax text" data-x={0.07} data-y={0.07}>
         <h2>Hello</h2>
         <h1>World</h1>
